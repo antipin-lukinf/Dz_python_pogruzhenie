@@ -12,18 +12,31 @@
 
 def input_number():
     number = input("Введите число от 1 до 999 : ")
-    print(len(number))
+
 
     if len(number) == 1:
-        number = int(number ** 2)
+        number = int(number) ** 2
 
-    if len(number) == 2:
-        number = number[1] * number[2]
+    elif len(number) == 2:
+        [int(i) for i in str(number)]
+        y = number[0]
+        x = number[1]
+        number = int(x) * int(y)
+        # number = number[0] * number[1]
+        # number1 = number[1] * number[2]
+        # number = number1
 
-    if len(number) == 3:
-        number = number[::-1]
+    elif len(number) == 3:
+        [int(i) for i in str(number)]
+        number1 = number[::-1]
+        number = number1
+
+    else: number = -1
 
     return number
 
 if __name__ == '__main__':
-    print(input_number())
+    number = input_number()
+    if number != -1:
+        print(number)
+    else: print('Данные не корректны')
