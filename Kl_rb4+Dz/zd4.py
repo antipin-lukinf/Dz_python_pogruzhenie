@@ -8,10 +8,10 @@
 """
 
 numbers = [2, 10, 6, 5, 9]
-
+print(numbers)
 
 def sort_number(*args):
-    min_number = numbers[1]
+
     for i in range(0, len(numbers) - 1):
         for j in range(0, len(numbers) - 1):
             if numbers[j] > numbers[j + 1]:
