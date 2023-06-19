@@ -7,6 +7,8 @@
 пользователем чисел до наибольшего включительно.
 """
 
+from operator import itemgetter
+
 string_numb = "8 1"
 uni_dict = {}
 
@@ -15,7 +17,14 @@ def my_dict(string_numb):
     string_numb = string_numb.split(" ")
     for i in string_numb:
         uni_dict[ord(i)] = i
+
     return uni_dict
 
 
-print(my_dict(string_numb))
+my_dict(string_numb)
+
+sorted_dict = dict(sorted(uni_dict.items(), key=itemgetter(1)))
+
+print(sorted_dict)
+
+
