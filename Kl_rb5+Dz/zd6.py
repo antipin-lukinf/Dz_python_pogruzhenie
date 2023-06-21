@@ -9,7 +9,13 @@
 без перехода на новую строку.
 """
 
-print(*(f'{x} * {y} = {x*y} {(x*y)}   {x+5} * {y} = {(x+5)*y}' for x in range(1, 6) for y in range(1, 11)), sep='\n')
+
+print('\n\n'.join(('\n'.join('\t\t'.join(f'{i:^3} * {i * j:^3}' for i in range(i[0], i[1])) for j in range(2, 11)) for i in [(2, 6), (6, 10)])), sep='')
+
+
+# print(*(f'{x} * {y} = {x*y} {(x*y)}   {x+5} * {y} = {(x+5)*y}' for x in range(1, 6) for y in range(1, 11)), sep='\n')
+
+
 
 
 
