@@ -1,6 +1,6 @@
 import zd_2
 import sys
 
-init_numbers = [i for i in sys.argv]
+init_numbers = list(map(int, [i for i in sys.argv][1:]))
 
-zd_2.gues_f(int(init_numbers[3]), int(init_numbers[2]), int(init_numbers[1]))
+zd_2.gues_f(*(init_numbers))

@@ -21,7 +21,7 @@ import random
 # number_down = int(input('Введите нижнюю границу диапазона : '))
 # count = int(input('Введите количество попыток : '))
 
-def gues_f(minimum, maximum, tries):
+def gues_f(tries=3, maximum=10, minimum=1):
     numb_rand = random.randint(minimum, maximum)
 
     while tries:
