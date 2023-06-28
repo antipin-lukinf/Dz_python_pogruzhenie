@@ -50,7 +50,7 @@ def inp_x_y_rand(DESC_SIZE):
     return x_sp, y_sp
 
 
-def queens_8(inp_x_y_rand, DESC_SIZE):
+def queens_8_rand(inp_x_y_rand, DESC_SIZE):
     inp_x_y_rand(DESC_SIZE)
     zn = True
     for i in range(DESC_SIZE):
@@ -67,9 +67,7 @@ spis_position_x = []
 spis_position_y = []
 count = 0
 while True:
-
-
-    if queens_8(inp_x_y_rand, DESC_SIZE):
+    if queens_8_rand(inp_x_y_rand, DESC_SIZE):
         spis_position_x.append(x_sp)
         spis_position_y.append(y_sp)
         count += 1
@@ -78,9 +76,3 @@ while True:
         print(count)
         print(spis_position_y)
         break
-
-
-
-
-
-
